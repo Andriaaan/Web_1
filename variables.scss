@@ -1,0 +1,89 @@
+$color-secondary: #333;
+$color-accent: #4CAF50;
+$color-bg: #f8f8f8;
+$color-text-accent: #fff;
+$font-family: Arial, sans-serif;
+$font-size-h3: 2rem;
+$font-size-button: 1.2rem;
+$border-radius: 5px;
+$padding-button: 1rem 2rem;
+$card-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+$card-hover-shadow: 0px 6px 9px rgba(0, 0, 0, 0.2);
+
+@mixin input-styles {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  @mixin input-styles-submit {
+    background-color: $color-accent;
+    color: $color-text-accent;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  @function calc-card-width($width) {
+    @return calc(#{$width} - 10px);
+  }
+
+  @mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+  
+@mixin link-reset {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: none;
+	color: inherit;
+	font: inherit;
+	text-decoration: none;
+	cursor: pointer;
+}
+  
+@mixin button-style($bg-color, $text-color) {
+	background-color: $bg-color;
+	color: $text-color;
+	padding: $padding-button;
+	font-size: $font-size-button;
+	border-radius: $border-radius;
+	text-decoration: none;
+	margin-top: 1rem;
+	
+	&:hover {
+	  background-color: $color-accent;
+	  color: $color-text-accent;
+	}
+}
+
+@mixin button-style-submit {
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	border: none;
+	background-color: $color-accent;
+	color: $color-bg;
+	font-size: 1rem;
+	cursor: pointer;
+  
+	&:hover {
+	  background-color: $color-accent;
+	}
+}
+  
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+  
+@function darken($color, $amount) {
+	@return darken($color, $amount);
+}

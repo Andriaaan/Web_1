@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Transfer Money - Money Transfer Service</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <div class="topnav">
+          <nav>
+              <ul>
+                <a class="active" href="./main.html">Home</a>
+                <a href="./cards.html">My Cards</a>
+                <a href="./transfer.html">Transfer Money</a>
+                <a href="./history.html">Transaction History</a>   
+              </ul>
+          </nav>
+      </div>
+
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">Home
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a class="active" href="./main.html">Home</a>
+            <a href="./cards.html">My Cards</a>
+            <a href="./transfer.html">Transfer Money</a>
+            <a href="./history.html">Transaction History</a>
+          </div>
+        </div>
+      </div>
+
+      <main>
+          <h3>Transfer Money</h3>
+          <form1 action="process-transfer.php" method="post">
+              <label1 for="sender">Sender:</label1>
+              <input type="text" id="sender" name="sender" required>
+
+              <label1 for="recipient">Recipient:</label1>
+              <input type="text" id="recipient" name="recipient" required>
+
+              <label1 for="amount">Amount:</label1>
+              <input type="number" id="amount" name="amount" required>
+
+              <label1 for="currency">Currency:</label1>
+              <select id="currency" name="currency" required>
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP">GBP</option>
+                  <!-- more currency options here -->
+              </select>
+
+              <button type="submit">Transfer</button>
+          </form1>
+      </main>
+
+      <footer class="footer">
+          <p>&copy; 2023 Money Transfer Service. All rights reserved.</p>
+      </footer>
+  </body>
+</html>
